@@ -1,0 +1,43 @@
+# Generated embeddings
+*.pt
+*.npy
+*.npz
+*.h5
+*.hdf5
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs and output plots (keep in local, don't commit)
+*.png
+*.pdf
+*.svg
+logs/
