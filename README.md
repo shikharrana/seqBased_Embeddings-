@@ -12,7 +12,7 @@ This project uses the **ASTRAL SCOP FASTA** dataset:
 astral-scopedom-seqres-gd-sel-gs-bib-40-2.03.fa.txt
 ```
 
-Located at: `/home/shikhar-rana/Downloads/dataset/`
+The dataset file is included in this repository. Place it in the repo root (same directory as `generate_embeddings.py`) if you downloaded it separately.
 
 ---
 
@@ -30,7 +30,7 @@ pip install -r requirements.txt
 
 ```bash
 python generate_embeddings.py \
-    --input /home/shikhar-rana/Downloads/dataset/astral-scopedom-seqres-gd-sel-gs-bib-40-2.03.fa.txt \
+    --input astral-scopedom-seqres-gd-sel-gs-bib-40-2.03.fa.txt \
     --output embeddings.pt
 ```
 
@@ -52,7 +52,7 @@ python generate_embeddings.py \
 **Per-sequence embeddings (one vector per protein):**
 ```bash
 python generate_embeddings.py \
-    --input /home/shikhar-rana/Downloads/dataset/astral-scopedom-seqres-gd-sel-gs-bib-40-2.03.fa.txt \
+    --input astral-scopedom-seqres-gd-sel-gs-bib-40-2.03.fa.txt \
     --output embeddings_per_seq.pt \
     --per-sequence
 ```
@@ -60,7 +60,7 @@ python generate_embeddings.py \
 **Smaller/faster model (8 M params, good for CPU):**
 ```bash
 python generate_embeddings.py \
-    --input /home/shikhar-rana/Downloads/dataset/astral-scopedom-seqres-gd-sel-gs-bib-40-2.03.fa.txt \
+    --input astral-scopedom-seqres-gd-sel-gs-bib-40-2.03.fa.txt \
     --output embeddings.pt \
     --model esm2_t6_8M_UR50D \
     --per-sequence
