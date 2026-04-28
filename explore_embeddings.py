@@ -171,7 +171,7 @@ def main():
         # Reduce to pca_components first for speed
         n_pre = min(args.pca_components, matrix.shape[1], matrix.shape[0])
         pre_pca = PCA(n_components=n_pre, random_state=42).fit_transform(matrix)
-        perp = min(args.tsne_perplexity, matrix.shape[0] - 1)
+        perp = min(args.tsne_perplexity, (matrix.shape[0] - 1) // 3)
         tsne = TSNE(n_components=2, perplexity=perp, random_state=42,
                     n_iter=1000, verbose=1)
         tsne2d = tsne.fit_transform(pre_pca)

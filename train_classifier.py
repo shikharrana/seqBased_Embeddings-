@@ -16,6 +16,7 @@ Usage:
 """
 
 import argparse
+from collections import Counter
 from pathlib import Path
 
 import numpy as np
@@ -145,7 +146,6 @@ def main():
     raw_labels = [label_map.get(seq_id, "unknown") for seq_id in ids]
 
     # Count per class and filter rare ones
-    from collections import Counter
     counts = Counter(raw_labels)
     valid_classes = {cls for cls, cnt in counts.items()
                      if cnt >= args.min_samples and cls != "unknown"}
